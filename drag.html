@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Drag n Drop</title>
+        <link href="drag.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="drag.js"></script>
+        <div id="container1" ondragover="allowDrop(event)" ondrop="drop(event)">
+            <div id="image" draggable="true" ondragstart="drag(event)">
+            </div>
+        </div>
+        <div id="container2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+    </body>
+</html> 

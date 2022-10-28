@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            Event Bubbling
+        </title>
+    </head>
+    <body>
+        <div id="logout">
+            <button>Logout</button><br><br>
+            <div id="login">
+                <button>Login</button>
+            </div>
+        </div>
+        <script>
+            document.getElementById("logout").addEventListener("click",function(){
+                alert("Logout successful");
+            },true)
+            document.getElementById("login").addEventListener("click",function(){
+                alert("Login successful");
+            },true)       
+        </script>
+    </body>
+</html>

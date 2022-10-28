@@ -1,0 +1,4 @@
+table{
+    background-color:rgb(169, 221, 239); 
+    transition: background-color 0.5s ease-in-out
+}

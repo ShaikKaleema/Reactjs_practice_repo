@@ -26,13 +26,13 @@ function App() {
   const totalExpense = list.reduce((acc, obj) => { return acc + obj.expense }, 0);
 
   return (
-    <div style={{ margin: 'auto', width: '50%', marginTop: '10rem' }}>
+    <div>
       <h3>How to use Map, Filter and Reduce</h3>
-      <div style={{ marginBottom: 16, textAlign: 'right' }}>
+      <div>
         <input type="text" value={keyword} onChange={e => setKeyword(e.target.value)} placeholder="search by name" />
       </div>
       <div>
-        <table style={{ width: '100%' }} border={true}>
+        <table border={1}>
           <thead>
             <tr>
               <th>#</th>

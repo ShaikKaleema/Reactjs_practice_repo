@@ -18,7 +18,6 @@ def solvePuzzle(state):
     h = 1
     while(h>0):
         level = level + 1
-        #index_0 represents the position of element 0 which represents empty space
         index_0 = state.index(0)
         if(index_0 == 0):
             arr = [1,3]
@@ -39,7 +38,7 @@ def solvePuzzle(state):
             arr = [2,4,8]
             state,h = move(arr,index_0,state)
         elif(index_0 == 6):
-            arr = [3,4]
+            arr = [3,7]
             state,h = move(arr,index_0,state)
         elif(index_0 == 7):
             arr = [4,6,8]

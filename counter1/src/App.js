@@ -6,9 +6,6 @@ class Counter extends React.Component {
       count: 0
     };
   }
-
-  // change code below this line
-
   increment() {
     this.setState({
       count: this.state.count + 1
@@ -26,8 +23,6 @@ class Counter extends React.Component {
       count: 0
     });
   };
-
-  // change code above this line
   render() {
     return (
 

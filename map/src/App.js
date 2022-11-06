@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 function App() {
   const [keyword, setKeyword] = useState('');
   const rawData = [
-    { name: 'Narendra Singh', email: 'narendra@gmail.com', mobile: '7838xxxxxx', expense: 8000 },
-    { name: 'Rajat Singh', email: 'rajat@gmail.com', mobile: '5838xxxxxx', expense: 2000 },
-    { name: 'Rahul Singh', email: 'rahul@gmail.com', mobile: '9838xxxxxx', expense: 6000 },
+    { name: 'ram', expense: 8000 },
+    { name: 'priya', expense: 2000 },
+    { name: 'kavya', expense: 6000 },
   ];
 
   // map
@@ -15,14 +15,10 @@ function App() {
       companyName: 'Google'
     }
   });
-
-  // filter
   let list = mappedData;
   if (keyword.length > 0) {
     list = mappedData.filter(i => i.name.toLowerCase().indexOf(keyword.toLowerCase()) > -1);
   }
-
-  // reduce
   const totalExpense = list.reduce((acc, obj) => { return acc + obj.expense }, 0);
 
   return (
@@ -38,8 +34,6 @@ function App() {
               <th>#</th>
               <th>Name</th>
               <th>Company</th>
-              <th>Email</th>
-              <th>Mobile</th>
               <th>Expense</th>
             </tr>
           </thead>
@@ -51,8 +45,6 @@ function App() {
                     <td>{index + 1}</td>
                     <td>{item.name}</td>
                     <td>{item.companyName ? item.companyName : '-'}</td>
-                    <td>{item.email}</td>
-                    <td>{item.mobile}</td>
                     <td>{item.expense}</td>
                   </tr>
                 )
@@ -60,7 +52,7 @@ function App() {
             }
           </tbody>
           <tfoot>
-            <td colSpan={5}>Total</td>
+            <td colSpan={3}>Total</td>
             <td>{totalExpense}</td>
           </tfoot>
         </table>

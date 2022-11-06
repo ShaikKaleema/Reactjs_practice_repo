@@ -1,4 +1,3 @@
-import './App.css';
 import AxiosDemo from "./AxiosDemo";
 
 function App() {
